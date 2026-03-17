@@ -1,0 +1,40 @@
+/* Grainy texture overlay for luxury effect */
+.grainy-overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.13;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  mix-blend-mode: multiply;
+}
+
+/* Ken Burns effect for hero */
+.kenburns {
+  animation: kenburnsZoom 18s ease-in-out infinite alternate;
+}
+@keyframes kenburnsZoom {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    transform: scale(1.08) translateY(-2%);
+  }
+}
+
+/* Asymmetric pill border for cards */
+.pill-card {
+  border-radius: 2rem 1rem 2.5rem 1.5rem/2rem 2.5rem 1rem 1.5rem;
+}
+
+/* Floating card for InfoMap */
+.floating-card {
+  box-shadow: 0 8px 32px 0 rgba(26,42,58,0.12), 0 1.5px 6px 0 rgba(212,175,55,0.04);
+  position: relative;
+  z-index: 2;
+}
+
+/* Overlay for map */
+.map-overlay {
+  filter: grayscale(20%) contrast(110%);
+}

@@ -7,12 +7,15 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        oxford: "#1a2a3a",
-        bone: "#f5f5e9",
-        gold: "#d4af37",
+        gold: '#D4AF37',
+        oxford: '#1a2a3a',
+        'oxford-dark': '#14212d',
+        'oxford-mid': '#2a3d50',
+        bone: '#f5f0e8',
+        'bone-dark': '#e8e0d0',
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"],
+        serif: ["Cormorant Garamond", "serif"],
         sans: ["Montserrat", "Inter", "sans-serif"],
       },
     },
