@@ -30,7 +30,7 @@ const Hero = () => {
           <span className="block text-lg md:text-2xl font-normal mt-2 tracking-wide">desde 1979</span>
         </h1>
         <p className="text-xl md:text-2xl text-bone/90 mb-8 font-light leading-relaxed tracking-wide">El punto de encuentro más distinguido de Arrecifes. Sabores auténticos en un ambiente inigualable.</p>
-        <button className="px-8 py-3 border border-gold text-gold rounded-full font-serif text-lg hover:bg-gold hover:text-oxford transition bg-transparent">Reservar Mesa</button>
+        <button className="px-8 py-3 border border-gold font-bold text-gold rounded-full font-serif text-lg hover:bg-gold hover:text-oxford transition bg-transparent">Reservar Mesa</button>
       </motion.div>
     </section>
   );

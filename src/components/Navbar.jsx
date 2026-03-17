@@ -41,7 +41,7 @@ const Navbar = () => {
           <a href="#menu" className={`transition font-sans tracking-wide ${scrolled ? "text-oxford hover:text-gold" : "text-bone hover:text-gold"}`}>Menú</a>
           <a href="#historia" className={`transition font-sans tracking-wide ${scrolled ? "text-oxford hover:text-gold" : "text-bone hover:text-gold"}`}>Historia</a>
           <a href="#ubicacion" className={`transition font-sans tracking-wide ${scrolled ? "text-oxford hover:text-gold" : "text-bone hover:text-gold"}`}>Ubicación</a>
-          <button className={`ml-6 px-5 py-2 border rounded-full font-serif text-base font-medium transition bg-transparent tracking-tight ${scrolled ? "border-oxford text-oxford hover:text-gold hover:border-gold" : "border-bone text-bone hover:text-gold hover:border-gold"}`}>Reservar Mesa</button>
+          <button className={`ml-6 px-5 py-2 border rounded-full font-serif text-base font-medium transition bg-transparent tracking-tight ${scrolled ? "border-oxford text-oxford font-bold hover:text-gold hover:border-gold" : "border-bone text-bone hover:text-gold hover:border-gold"}`}>Reservar Mesa</button>
         </div>
         {/* Mobile Hamburger */}
         <div className="md:hidden">

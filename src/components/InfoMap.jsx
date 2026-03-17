@@ -7,9 +7,9 @@ const InfoMap = () => (
     <div className="absolute inset-0 grainy-overlay" />
     <div className="max-w-6xl mx-auto px-4 flex flex-col-reverse md:flex-row gap-10 items-stretch relative z-10">
       {/* Map */}
-      <div className="flex-1 rounded-3xl overflow-hidden border border-bone/30 min-h-[320px] relative">
+      <div className="flex-1 rounded-3xl overflow-hidden border border-bone/30 min-h-[320px] relative z-0">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.658253818956!2d-60.111623!3d-34.062013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb9772c9162983%3A0xc3f9829f0460336b!2sLa%20Biela!5e0!3m2!1ses-419!2sar!4v1710000000000!5m2!1ses-419!2sar"
+          src="https://www.google.com/maps?q=-34.05976190140332,-60.09528838865676&z=15&output=embed"
           width="100%"
           height="100%"
           className="map-overlay min-h-[320px]"
@@ -28,18 +28,27 @@ const InfoMap = () => (
         transition={{ duration: 0.7, ease: "easeOut" }}
       >
         <h2 className="font-serif text-3xl text-oxford mb-6 tracking-tight font-bold">Horarios & Contacto</h2>
-        <div className="flex items-center gap-3 mb-4 text-oxford/90">
-          <Clock className="w-5 h-5 text-gold" />
+        <div className="flex items-center gap-3 mb-4 text-oxford/90 group cursor-default">
+          <Clock className="w-5 h-5 text-gold transition-transform duration-300 group-hover:scale-125 group-hover:rotate-12" />
           <span className="font-sans tracking-wide leading-relaxed">Lunes a Sábado: 11:30 a 15:00 y 19:30 a 01:00</span>
         </div>
-        <div className="flex items-center gap-3 mb-4 text-oxford/90">
-          <Phone className="w-5 h-5 text-gold" />
+        <div className="flex items-center gap-3 mb-4 text-oxford/90 group cursor-default">
+          <Phone className="w-5 h-5 text-gold transition-transform duration-300 group-hover:scale-125" />
           <span className="font-sans tracking-wide leading-relaxed">02478 46-3585</span>
         </div>
-        <div className="flex items-center gap-3 mb-4 text-oxford/90">
-          <MapPin className="w-5 h-5 text-gold" />
+        <div className="flex items-center gap-3 mb-4 text-oxford/90 group cursor-default">
+          <MapPin className="w-5 h-5 text-gold transition-transform duration-300 group-hover:scale-125 group-hover:-translate-y-0.5" />
           <span className="font-sans tracking-wide leading-relaxed">RN8, Arrecifes, Buenos Aires</span>
         </div>
+        <a
+          href="https://maps.google.com/?q=La+Biela+Arrecifes+Buenos+Aires"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex items-center gap-2 px-5 py-2 border border-gold text-gold rounded-full font-montserrat text-m font-bold hover:bg-gold hover:text-oxford transition-all duration-300 bg-transparent self-start"
+        >
+          <MapPin className="w-4 h-4" />
+          Cómo llegar
+        </a>
       </motion.div>
     </div>
   </section>
