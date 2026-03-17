@@ -8,8 +8,9 @@ import Gallery from "./components/Gallery";
 import InfoMap from "./components/InfoMap";
 import Footer from "./components/Footer";
 
-const GoldDivider = () => (
-  <div className="flex items-center justify-center py-2 bg-bone">
+// bg prop para que el color del divider coincida con la sección que lo precede
+const GoldDivider = ({ bg = "bone-radial" }) => (
+  <div className={`flex items-center justify-center py-2 ${bg}`}>
     <div className="h-px w-10 bg-gold opacity-40" />
     <div className="mx-3 w-1.5 h-1.5 rotate-45 bg-gold opacity-40" />
     <div className="h-px w-10 bg-gold opacity-40" />
@@ -22,12 +23,13 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
-        <GoldDivider />
+        <GoldDivider bg="bone-radial" />
         <History />
-        <GoldDivider />
+        <GoldDivider bg="bone-radial-subtle" />
         <Dishes />
-        <GoldDivider />
+        <GoldDivider bg="bg-oxford" />
         <Gallery />
+        <GoldDivider bg="bone-radial" />
         <InfoMap />
       </main>
       <Footer />

@@ -1,40 +1,86 @@
-/* Grainy texture overlay for luxury effect */
+/* ── GRAINY OVERLAY ─────────────────────────────
+   Textura de papel. Opacidad baja: que se sienta
+   sin que se vea. En secciones oxford y bone.
+─────────────────────────────────────────────── */
 .grainy-overlay {
   pointer-events: none;
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.13;
+  opacity: 0.18;
   background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
   mix-blend-mode: multiply;
 }
 
-/* Ken Burns effect for hero */
+/* Versión más presente para secciones bone claras */
+.grainy-overlay-bone {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.26;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  mix-blend-mode: multiply;
+}
+
+/* ── GRADIENTE RADIAL BONE ──────────────────────
+   Simula caída de luz cálida desde un punto,
+   como en fotografía de producto de alta gama.
+   Reemplaza el fondo plano bg-bone en secciones.
+   Usar como clase CSS directamente en <section>.
+─────────────────────────────────────────────── */
+.bone-radial {
+  background: radial-gradient(
+    ellipse at 65% 35%,
+    #e2d5bf 0%,
+    #ede8da 50%,
+    #e6dfd0 100%
+  );
+}
+
+/* Variante más sutil — secciones con mucho contenido */
+.bone-radial-subtle {
+  background: radial-gradient(
+    ellipse at 50% 15%,
+    #e6ddd0 0%,
+    #ede8da 65%
+  );
+}
+
+/* ── KEN BURNS ──────────────────────────────────
+   Animación del fondo del Hero.
+─────────────────────────────────────────────── */
 .kenburns {
   animation: kenburnsZoom 18s ease-in-out infinite alternate;
 }
 @keyframes kenburnsZoom {
-  0% {
-    transform: scale(1) translateY(0);
-  }
-  100% {
-    transform: scale(1.08) translateY(-2%);
-  }
+  0%   { transform: scale(1) translateY(0); }
+  100% { transform: scale(1.08) translateY(-2%); }
 }
 
-/* Asymmetric pill border for cards */
+/* ── PILL CARD ───────────────────────────────────
+   Borde asimétrico orgánico para cards.
+─────────────────────────────────────────────── */
 .pill-card {
-  border-radius: 2rem 1rem 2.5rem 1.5rem/2rem 2.5rem 1rem 1.5rem;
+  border-radius: 2rem 1rem 2.5rem 1.5rem / 2rem 2.5rem 1rem 1.5rem;
 }
 
-/* Floating card for InfoMap */
+/* ── FLOATING CARD ──────────────────────────────
+   Sombra para la info card de InfoMap.
+─────────────────────────────────────────────── */
 .floating-card {
-  box-shadow: 0 8px 32px 0 rgba(26,42,58,0.12), 0 1.5px 6px 0 rgba(212,175,55,0.04);
+  box-shadow:
+    0 8px 32px 0 rgba(26, 42, 58, 0.12),
+    0 1.5px 6px 0 rgba(212, 175, 55, 0.04);
   position: relative;
   z-index: 2;
 }
 
-/* Overlay for map */
+/* ── MAPA OSCURO ────────────────────────────────
+   Convierte el mapa blanco de Google Maps en un
+   mapa dark que armoniza con la paleta oxford/gold.
+   Sin react-leaflet, sin dependencias — solo CSS.
+─────────────────────────────────────────────── */
 .map-overlay {
-  filter: grayscale(20%) contrast(110%);
+  filter: invert(90%) hue-rotate(180deg) saturate(0.75) brightness(0.88);
 }
